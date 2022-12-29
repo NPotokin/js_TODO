@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do</title>
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="max-w-4xl w-1/2 h-96 bg-gray-400 container flex flex-col rounded-3xl p-3 mx-auto my-3">
         <h1 class="text-5xl mx-auto font-bold text-gray-700">To - Do List</h1>
         <div class="container flex flex-row mx-auto justify-center">
             <input type="text" name="input" id="input"
-            class="rounded-2xl w-96 my-3">
-            <input type="button" value="Add" class="rounded-full bg-emerald-300 hover:bg-emerald-500
+            class="rounded-2xl w-96 my-3" value="">
+            <input  onclick="adding()" id="addBtn" type="submit" value="Add" class="rounded-full
+             bg-emerald-300 hover:bg-emerald-500
              text-gray-700 text-xl font-semibold m-3 px-6 py-1" >
         </div>
         <ul class="mx-auto">
-            <li >
-                <div class="container flex flex-row mx-auto">
-                    <input type="button" value="Done!" 
-                    class="rounded-full bg-emerald-300 hover:bg-emerald-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1">
-                    <p class="w-auto rounded-xl bg-gray-200 text-gray-700 text-xl font-semibold m-3 px-6 py-1">dfgdhadfhsfghsdfghdfghdzkjdfbva;dcb'zlkv</p>
-                    <input type="button" value="Delete"
-                    class="rounded-full bg-red-300 hover:bg-red-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1">
-                </div>
-            </li>
+            <!--
+                <li class="container flex flex-row mx-auto">
+                    <input id="doneBtn" type="button" value="Done" 
+                    class="rounded-full bg-emerald-300 hover:bg-emerald-500 text-gray-700 text-xl 
+                    font-semibold m-3 px-6 py-1">
+                    <p id="task" class="w-max rounded-xl bg-gray-200 text-gray-700 
+                    text-xl font-semibold m-3 px-6 py-1">Create your first Goal!!</p>
+                    <input id="deleteBtn" type="button" value="Delete"
+                    class="rounded-full bg-red-300 hover:bg-red-500 text-gray-700 text-xl 
+                    font-semibold m-3 px-6 py-1">
+                </li>
+            -->
         </ul>
 
 
