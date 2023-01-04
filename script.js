@@ -20,10 +20,14 @@ function adding() {
         const doneBtn = document.createElement("input");
         listItem.appendChild(doneBtn);
         doneBtn.id = "doneBtn";
-        doneBtn.onclick = "finishing()";
+        doneBtn.onclick = function(){
+            goalText.innerHTML = "DONE!";
+        }
         doneBtn.value = "V";
         doneBtn.type = "button";
         doneBtn.className = "rounded-full bg-emerald-300 hover:bg-emerald-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
+        
+      
         // Creating goal text
         const goalText = document.createElement("p");
         listItem.appendChild(goalText);
@@ -31,18 +35,29 @@ function adding() {
         goalText.className= "w-max rounded-xl bg-gray-200 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
         goalText.innerText = input.value;
         
+       
+       
         //Creating Delete button
         const deleteBtn = document.createElement("input");
         listItem.appendChild(deleteBtn);
+        deleteBtn.onclick = function(){listItem.remove()};
         deleteBtn.id = "deleteBtn";
         deleteBtn.value = "X";
         deleteBtn.type = "Button";
         deleteBtn.className = "rounded-full bg-red-300 hover:bg-red-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
-    
+       
+       
        input.value = "";
     } 
+    
 }
 
-function finishing()  {
-    doneBtn.value = "C";
+
+function deleting () {
+    goalText.remove();
+}
+
+
+function finishing() {
+
 }
