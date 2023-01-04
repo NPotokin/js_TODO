@@ -1,48 +1,48 @@
 // First lets assign variables
-
 let input = document.getElementById("input");
-//let addButton = document.getElementById("addBtn");
-//let doneBxtton = document.getElementById("doneBtn");
-//let goal = document.getElementById("task");
-//let deleteBcutton = document.getElementById("deleteBtn");
+
+// Creating Unordered List
+const uList = document.createElement("ul");
+document.body.append(uList);
+uList.className = "mx-auto max-w-4xl w-1/2 h-96 bg-gray-400 container flex flex-col rounded-3xl p-3 my-3";
 
 // Next create functions
-
 function adding() {
     if (input.value == "") {
         alert("Type something!");
     } else {
-        // Creating list item
-       let goalItem = document.createElement("li");
-       document.getElementsByTagName("ul").appendChild(goalItem);
-       goalItem.className = "container flex flex-row mx-auto";
+        //Create list item
+        const listItem = document.createElement("li");
+        uList.appendChild(listItem);
+        listItem.className = "container flex flex-row mx-auto";
 
-       // Creating done btn, para, delete btn
-       let doneButton = document.createElement("input");
-       goalItem.appendChild(doneButton);
-       doneButton.id = "doneBtn";
-       doneButton.type = "button";
-       doneButton.value = "Done";
-       doneButton.className = "rounded-full bg-emerald-300 hover:bg-emerald-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
-
-       let goal = document.createElement("p");
-       goalItem.appendChild(goal);
-        goal.id = "task";
-        goal.className = "w-max rounded-xl bg-gray-200 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
-        goal.innerHTML = input.value;
-
-        let deleteButton = document.createElement("input");
-        goalItem.appendChild(deleteButton);
-       doneButton.id = "deleteBtn";
-       doneButton.type = "button";
-       doneButton.value = "Delete";
-       doneButton.className = "rounded-full bg-red-300 hover:bg-red-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
+        //Creating Done button
+        const doneBtn = document.createElement("input");
+        listItem.appendChild(doneBtn);
+        doneBtn.id = "doneBtn";
+        doneBtn.onclick = "finishing()";
+        doneBtn.value = "V";
+        doneBtn.type = "button";
+        doneBtn.className = "rounded-full bg-emerald-300 hover:bg-emerald-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
+        // Creating goal text
+        const goalText = document.createElement("p");
+        listItem.appendChild(goalText);
+        goalText.id = "task";
+        goalText.className= "w-max rounded-xl bg-gray-200 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
+        goalText.innerText = input.value;
         
+        //Creating Delete button
+        const deleteBtn = document.createElement("input");
+        listItem.appendChild(deleteBtn);
+        deleteBtn.id = "deleteBtn";
+        deleteBtn.value = "X";
+        deleteBtn.type = "Button";
+        deleteBtn.className = "rounded-full bg-red-300 hover:bg-red-500 text-gray-700 text-xl font-semibold m-3 px-6 py-1";
     
-        input.value = "";
+       input.value = "";
     } 
 }
 
-//addButton.addEventListener("click", function(){
-//    goal.innerHTML = input.value;
-//})
+function finishing()  {
+    doneBtn.value = "C";
+}
