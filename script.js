@@ -4,7 +4,7 @@ let input = document.getElementById("input");
 // Creating Unordered List
 const uList = document.createElement("ul");
 document.body.append(uList);
-uList.className = "mx-auto max-w-4xl w-1/2 h-96 bg-gray-400 container flex flex-col rounded-3xl p-3 my-3";
+uList.className = "mx-auto max-w-4xl w-1/2  bg-gray-400 container flex flex-col rounded-3xl p-3 my-3 justify-between";
 
 // Next create functions
 function adding() {
